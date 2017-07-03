@@ -1,0 +1,68 @@
+/* Gravity Forms Overide Styles*/
+body .gform_wrapper .top_label div.ginput_container {
+    margin-top: 0!important;
+}
+.gform_wrapper ul.gform_fields li.gfield {
+    padding-right: 0!important;
+}
+body .gform_wrapper ul li.gfield {
+    margin-top: 0!important;
+    padding-top: 0!important;
+}
+.gform_wrapper .top_label .gfield_label{
+    display:none!important;
+}
+.gform_wrapper .gform_footer{
+    margin: 0!important;
+    padding: 0!important;
+}
+.gform_footer .button{
+    bottom:0!important;
+    margin:0!important;
+}
+/*------------------------------*/
+.gform_footer .button-wrapper, input[type="submit"]{
+    text-align:center;
+    margin: 0 auto;
+    display:block;
+} 
+.gform_footer .button-wrapper .button, input{
+    line-height: inherit;
+    padding: 9px 15px;
+    cursor: pointer;
+    border-radius: 0;
+    font-family: 'Nexa',sans-serif;
+    letter-spacing: 1.5px;
+    border: 1px solid #fff;
+    background: #646e8c none repeat scroll 0 0;
+    color: #fff;
+    transition: all 0.5s ease-in-out 0s;
+    display: inline-block;
+    float: none;
+    width: inherit;
+    text-transform: uppercase;
+}
+.gform_footer .button-wrapper .button:hover, input:hover{
+    background:#c0d0ed;
+    color:#2e3655;
+}
+.gform_wrapper input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]), input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]){
+    display: block;
+    font-size: 14px!important;
+    height: 38px;
+    line-height: 1.42857;
+    margin-bottom: 10px;
+    padding: 8px 12px!important;
+    vertical-align: middle;
+    width: 100%;
+    background-color: #ffffff;
+    background-image: linear-gradient(180deg, #646e8c, #646e8c);
+    border: 1px solid #fff;
+    color: #fff;
+    font-family: 'Nexa',sans-serif!important;
+    letter-spacing: 1.5px!important;
+    text-transform:uppercase;
+}
+.gform_wrapper input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]):focus, input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]):focus{
+    border: 1px solid #2e3655;  
+}

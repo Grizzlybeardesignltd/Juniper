@@ -1,0 +1,54 @@
+/* SOCIAL ICONS */
+ul#social{
+    display:block;
+    text-align:center;
+    margin: 0;
+}
+ul#social li {
+    float:none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size:105%;
+}
+ul#social li a {
+    display:block;
+}
+ul#social li a i {
+    display: block;
+    width:25px;
+    height:25px;
+    line-height:25px;
+    color:#c0d0ed; /*Light Steel Blue*/
+    transition: all 0.5s ease-in-out 0s;
+}
+ul#social li a i.fa-instagram{
+    background:none;
+}
+ul#social li a:hover{
+    background:#2e3655; /*Dark Slate Blue*/
+}
+ul#social li a:hover i{
+   
+}
+ul#social li a:hover i.fa-instagram{
+    
+}
+/* FOOTER */
+.footer #footer-logo img, .footer #footer-logo .text-block-3{
+    float:left;
+    text-align:left;
+}
+.footer #footer-contact-information p{
+    margin:0;
+    text-transform:uppercase;
+}
+.footer nav a{
+    transition:all 0.35s ease-in-out 0s;
+    color:#fff;
+}
+.footer nav a:hover{
+    color:#c0d0ed; /*Light Steel Blue*/
+}
+
+

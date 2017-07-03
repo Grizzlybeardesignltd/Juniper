@@ -1,0 +1,7 @@
+#about .w-container div:first-child img{
+    height:100%;
+    margin-bottom:70px;
+}
+.page-template-about .cta-line{
+    margin-bottom:0;
+}
