@@ -1,14 +1,10 @@
 <?php
 
-/* * *******************
-  Enqueue the proper CSS
-  if you use Sass.
- * ******************* */
-if (!function_exists('grizzlybear_enqueue_style')) {
-    function grizzlybear_enqueue_style() {
-        wp_register_style('grizzlybear-main-stylesheet', get_stylesheet_directory_uri() . '/css/app.css', array(), '');
-        wp_enqueue_style('grizzlybear-main-stylesheet');
+if (!function_exists('gt_enqueue_style')) {
+    function gt_enqueue_style() {
+        wp_enqueue_style('gt-stylesheet', get_stylesheet_directory_uri() . '/css/app.css', array(), '');
+        wp_enqueue_style('gt-custom', get_stylesheet_directory_uri() . '/css/custom.css', array(), '');        
     }
 }
-add_action('wp_enqueue_scripts', 'grizzlybear_enqueue_style');
+add_action('wp_enqueue_scripts', 'gt_enqueue_style');
 ?>

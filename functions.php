@@ -1,13 +1,57 @@
 <?php
-require_once('lib/clean.php'); // do all the cleaning and enqueue here
+/* * ********************
+  Clean WordPress Additionals
+ * ******************** */
+require_once('lib/clean.php');
+
+/* * ********************
+  Enqueue CSS Stylesheets
+ * ******************** */
+
 require_once('lib/enqueue-style.php');
+
+/* * ********************
+  Enquire Javascript Scripts
+ * ******************** */
+
 require_once('lib/enqueue-scripts.php');
+
+/* * ********************
+  Custom Post Types
+ * ******************** */
+
 require_once('lib/custom-post-types.php');
+
+/* * ********************
+  Remove this asap
+ * ******************** */
+
 require_once('lib/acf-options.php');
-require_once('lib/foundation.php'); 
+
+/* * ********************
+  Foundation Needs Removing
+ * ******************** */
+
+require_once('lib/pagination.php'); 
+
+/* * ********************
+  Entry Meta (Can be combined into another file)
+ * ******************** */
+
 require_once('lib/entry-meta.php'); 
+
+/* * ********************
+  Custom Widget Areas
+ * ******************** */
+
 require_once('lib/widget-areas.php');
+
+/* * ********************
+  Navigation
+ * ******************** */
+
 require_once('lib/nav.php');
+require_once('lib/navigation.php');
 
 /* * ********************
   Add theme supports
@@ -29,11 +73,6 @@ if (!function_exists('grizzlybear_theme_support')) {
 
         // Add menu support. http://codex.wordpress.org/Function_Reference/register_nav_menus
         add_theme_support('menus');
-        register_nav_menus(array(
-            'primary' => __('Primary Nav', 'grizzlybear'),
-            'footer' => __('Footer Nav', 'grizzlybear'),
-            'mobile_menu' => __('Mobile Nav', 'grizzlybear')
-        ));
     }
 }
 

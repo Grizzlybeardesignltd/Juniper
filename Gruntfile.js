@@ -7,11 +7,8 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        // If you can't get source maps to work, run the following command in your terminal:
-        // $ sass scss/foundation.scss:css/foundation.css --sourcemap
-        // (see this link for details: http://thesassway.com/intermediate/using-source-maps-with-sass )
         sourceMap: true,
-        includePaths: ['bower_components/foundation/scss']
+        includePaths: ['bower_components/bootstrap-sass/assets/stylesheets/bootstrap']
       },
 
       dist: {
@@ -27,7 +24,7 @@ module.exports = function(grunt) {
     copy: {
       scripts: {
         expand: true,
-        cwd: 'bower_components/foundation/js/vendor/',
+        cwd: 'bower_components/bootstrap-sass/javascripts/',
         src: '**',
         flatten: 'true',
         dest: 'js/vendor/'
@@ -41,8 +38,6 @@ module.exports = function(grunt) {
       },
 
     },
-
-
       'string-replace': {
 
         fontawesome: {
@@ -67,19 +62,15 @@ module.exports = function(grunt) {
         dist: {
           src: [
 
-          // Foundation core
-          'bower_components/foundation/js/foundation/foundation.js',
-
-          // Pick the componenets you need in your project
-          'bower_components/foundation/js/foundation/foundation.clearing.js',
-          'bower_components/foundation/js/foundation/foundation.offcanvas.js',
+          // Bootstrap core
+          'bower_components/bootstrap-sass/javascripts/bootstrap.min.js',
 
           // Include your own custom scripts (located in the custom folder)
           'js/custom/*.js'
 
           ],
           // Finally, concatinate all the files above into one single file
-          dest: 'js/foundation.js',
+          dest: 'js/bootstrap.js',
         },
       },
 
@@ -87,7 +78,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           // Shrink the file size by removing spaces
-          'js/foundation.js': ['js/foundation.js']
+          'js/bootstrap.js': ['js/bootstrap.js']
         }
       }
     },

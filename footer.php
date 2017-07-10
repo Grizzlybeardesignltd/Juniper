@@ -1,19 +1,29 @@
-<div class="footer" data-ix="slide-up">
+<!-- If is fullwidth need conditional to enable/disable this section -->
+</div>
+</div>
+<footer id="footer">
     <?php echo get_template_part('parts/footer', 'social');?>
-    <div class="w-container">
-        <div class="w-row">
-            <div id="footer-logo" class="column-3 w-col w-col-4"><a href="<?php get_bloginfo('url');?>"><img class="image-11" sizes="(max-width: 479px) 77vw, 176px" src="<?php echo get_template_directory_uri(); ?>/images/Juniper-Logo-White-01.png" srcset="<?php echo get_template_directory_uri(); ?>/images/Juniper-Logo-White-01-p-500.png 500w, <?php echo get_template_directory_uri(); ?>/images/Juniper-Logo-White-01.png 990w" width="176"></a>
+    <div class="container">
+        <div class="row">
+            <!-- This is where the range slider would define how many widget areas display -->
+            
+            <div id="footer-logo" class="col-md-4">
+                <!-- Link in logo here -->
+                <a href="<?php bloginfo('url');?>"><img src="<?php echo get_template_directory_uri(); ?>/images/Juniper-Logo-White-01.png" alt="<?php bloginfo('name');?>"></a>
                 <?php echo get_template_part('parts/footer', 'contact-info');?>
             </div>
-            <div class="w-col w-col-4">
+            
+            <div class="col-md-4">
                 <?php echo get_template_part('parts/footer', 'form');?>
             </div>
-            <div class="w-col w-col-4">
-                <?php echo get_template_part('parts/footer', 'navbar');?>
+            
+            <div class="col-md-4">
+                <?php gt_footer_nav();?>
             </div>
         </div>
     </div>
-</div>
+</footer>
+<!-- Tracking Code option to go here -->
 <?php wp_footer(); ?>
 </body>
 </html>

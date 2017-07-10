@@ -2,22 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="4">
         <file>
-            <url>lib/enqueue-scripts.php</url>
-            <bookmark id="4">
-                <name/>
-                <line>5</line>
-                <key/>
-            </bookmark>
-        </file>
-        <file>
-            <url>scss/site/_navigation.scss</url>
-            <bookmark id="1">
-                <name/>
-                <line>0</line>
-                <key/>
-            </bookmark>
-        </file>
-        <file>
             <url>page-templates/about.php</url>
             <bookmark id="3">
                 <name/>
@@ -30,6 +14,22 @@
             <bookmark id="2">
                 <name/>
                 <line>44</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>scss/site/_navigation.scss</url>
+            <bookmark id="1">
+                <name/>
+                <line>0</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>lib/enqueue-scripts.php</url>
+            <bookmark id="4">
+                <name/>
+                <line>5</line>
                 <key/>
             </bookmark>
         </file>

@@ -1,24 +1,24 @@
 <?php get_header(); ?>
 
 <section id="blog" role="main">
-    <div class="w-row">
-        <div class="w-col-12 w-col">
+    <div class="row">
+        <div class="col-md-12">
             <div id="blog-content">
-            <div class="w-row">
-                <div class="w-col-6 w-col">
+            <div class="row">
+                <div class="col-md-6">
                     <form role="search" method="get" id="searchform" action="<?php echo home_url('/'); ?>">
-                        <div class="w-row collapse">
-                            <div class="w-col-10 w-col">
+                        <div class="row collapse">
+                            <div class="col-md-10">
                                 <input type="text" value="" name="s" id="s" placeholder="<?php esc_attr_e('Search', 'grizzlybear'); ?>">
                                 <input type="hidden" name="post_type" value="post" />                             
                             </div>
-                            <div class="w-col-2 w-col right-col">
+                            <div class="col-md-2 right-col">
                                 <button type="submit">Go</button>
                             </div>
                         </div>
                     </form>
                 </div>
-                <div class="w-col-3 w-col">
+                <div class="col-md-3">
                     <ul class="cat-arch-menu">
                         <li>Categories
                             <ul>
@@ -27,7 +27,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="w-col-3 w-col">
+                <div class="col-md-3">
                     <ul class="blog-menu cat-arch-menu">
                         <li>Archives
                             <ul>
@@ -37,7 +37,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="w-row">
+            <div class="row">
             <h2><?php _e('Search Results for', 'grizzlybear'); ?> "<?php echo get_search_query(); ?>"</h2>
             </div>
             <?php while (have_posts()) : the_post(); ?>

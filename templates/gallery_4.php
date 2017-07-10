@@ -38,11 +38,11 @@ get_header();
   </div>
   <div class="section-14">
     <div class="w-container">
-      <div class="w-row">
-        <div class="left-col w-col w-col-6">
+      <div class="row">
+        <div class="left-col col-md-6">
           <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
         </div>
-        <div class="right-col w-col w-col-6">
+        <div class="right-col col-md-6">
           <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
         </div>
       </div>

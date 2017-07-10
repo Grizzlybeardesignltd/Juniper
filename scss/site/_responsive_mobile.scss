@@ -435,14 +435,14 @@ A. CUSTOM SETTINGS
             content: "•";
             text-align: center;
             opacity: .25;
-            color: $darkblue;
+            color: $primarycolor;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
         .slick-dots li.slick-active button:before
             {
             opacity: .75;
-            color: $lightblue;
+            color: $secondarycolor;
         }
     }
     /**

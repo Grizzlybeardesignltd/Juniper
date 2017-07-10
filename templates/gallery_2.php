@@ -4,45 +4,97 @@
  */
 get_header();
 ?>
-  <div class="section-7">
-    <div class="w-container">
-      <div class="div-block-19">
-        <h1 class="heading-5"><?php the_title();?></h1><img class="heading-bdr line" sizes="(max-width: 767px) 47vw, (max-width: 991px) 300px, 425px" src="<?php echo get_template_directory_uri();?>/images/blue-line-01.png" srcset="<?php echo get_template_directory_uri();?>/images/blue-line-01-p-500.png 500w, <?php echo get_template_directory_uri();?>/images/blue-line-01-p-800.png 800w, <?php echo get_template_directory_uri();?>/images/blue-line-01-p-1080.png 1080w, <?php echo get_template_directory_uri();?>/images/blue-line-01-p-1600.png 1600w, <?php echo get_template_directory_uri();?>/images/blue-line-01-p-2000.png 2000w, <?php echo get_template_directory_uri();?>/images/blue-line-01.png 2409w" width="415">
-      </div>
-    </div>
-  </div>
-  <div class="section-10">
-    <div class="w-container">
-      <div class="w-row">
-            <?php
-            $query = array(
-                'post_type' => 'portfolio',
-                'posts_per_page' => 3,
-                'orderby' => 'date',
-                'order' => 'ASC'
-            );
-            //print_r($query);
-            $queryObject = new WP_Query($query);
-            if ($queryObject->have_posts()) {
-                while ($queryObject->have_posts()) {
-                    $queryObject->the_post();
-                    ?>
-                    <div class="w-col w-col-4">
-                        <a href="<?php the_permalink();?>">
-                            <figure>
-                                <?php the_post_thumbnail('large'); ?>
-                                <figcaption>
-                                    <h2><span class="inn"><?php the_title(); ?></span></h2>
-                                </figcaption>
-                            </figure>
-                        </a>
+<div class="container">
+    <div class="row">
+        <main id="gallery">
+            <div class="gallery-content col-lg-12">
+                <div class="gt-page-title">
+                    <h1><?php the_title(); ?></h1>
+                    <img class="heading-bdr line" src="<?php echo get_template_directory_uri(); ?>/images/blue-line-01.png"  width="415">
+                </div>
+                <?php the_content(); ?>
+            </div>
+            <div class="grid">
+
+
+                <!-- get posts -->
+                <?php
+                $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
+
+                $args = array(
+                    'posts_per_page' => 6,
+                    'orderby' => 'post_date',
+                    'order' => 'DESC',
+                    'post_type' => 'gallery',
+                    'post_status' => 'publish',
+                    'paged' => $paged,
+                    'suppress_filters' => true);
+
+                $posts = get_posts($args);
+                ?>
+
+                <?php $the_query = new WP_Query($args); ?>
+                <?php foreach ($posts as $post) : setup_postdata($post); ?>
+                    <!-- Column number required to be implemented in a function to be based off the Gallery layout option -->
+                    <div class="col-md-4">
+                        <!-- Figure class to be decided by styling settings -->
+                        <figure class="">
+                            <?php echo the_post_thumbnail('medium'); ?>
+                            <figcaption>
+                                <h2><?php the_title(); ?></h2>
+                                <a href="<?php the_permalink(); ?>">View more</a>
+                            </figcaption>   
+                        </figure>
                     </div>
-                    <?php
+                <?php endforeach; ?>
+            </div>
+
+                <!-- pagination -->
+                <?php
+                $big = 999999999; // need an unlikely integer
+
+                $pageNumbers = paginate_links(array(
+                    'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+                    'format' => '?paged=%#%',
+                    'current' => max(1, get_query_var('paged')),
+                    'total' => $the_query->max_num_pages,
+                    'prev_text' => __(''),
+                    'next_text' => __(''),
+                ));
+
+                if ($pageNumbers != NULL) {
+
+                    $temp = get_previous_posts_link('&lt; Previous', 0);
+
+                    echo '<div class="pagination-container">';
+
+                    if (!$temp) {
+                        echo '<div id="previous-link inactive">';
+                        echo "<span class='inactive'>&lt; Previous</span>";
+                    } else {
+                        echo '<div id="previous-link">';
+                        echo $temp;
+                    }
+
+                    echo '</div><div id="number-links">';
+
+                    echo $pageNumbers;
+
+                    $temp = get_next_posts_link('Next &gt;', $the_query->max_num_pages);
+
+                    if (!$temp) {
+                        echo '</div><div id="next-link inactive">';
+                        echo "<span class='inactive'>Next &gt;</span>";
+                    } else {
+                        echo '</div><div id="next-link">';
+                        echo $temp;
+                    }
+
+                    echo '</div></div><div class="clearfix"></div>';
                 }
-            };
-            rewind_posts();
-            ?>
-        </div>
+                ?>
+                <!-- pagination - end -->
+        </main>
     </div>
-  </div>
+</div>
 <?php get_footer(); ?>

@@ -1,32 +1,30 @@
- /* Global config */
-@import "config/variables"; // Your custom variables
-@import "config/colors"; // Your custom color scheme
-@import "config/settings"; // Default settings file. Uncomment each setting you need to change
+@import "config/customVariables";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "config/colors";
+@import "config/custom";
 
-/* Foundation 5 */
-// @import "foundation"; // Foundation 5 by Zurb
-
-/* Behold, here are all the Foundation components. Comment out "foundation" above if you would select the parts
-of Foundation used instead.
-This can decrease the css file size drastically, and should be done before production*/
-  @import "foundation/components/grid";
-  @import "foundation/components/buttons";
-  @import "foundation/components/clearing";
-  @import "foundation/components/inline-lists";
-  @import "foundation/components/pagination";
-  @import "foundation/components/type";
-//  @import "foundation/components/offcanvas";
-  @import "foundation/components/visibility";
 
 /* Site structure */
 @import "site/structure"; // Your site structure
 
 /* Assets */
 @import 'site/reset';
-@import 'site/layout';
-@import 'site/variables';
-@import 'site/webflow';
 @import 'site/normalize';
+@import 'site/variables';
+@import 'site/layout';
+@import 'site/typography';
+@import 'site/widgets';
+@import 'site/forms';
+@import 'site/webflow';
+
 @import 'site/juniper-home.webflow';
+@import 'site/header';
+@import 'site/navigation';
+@import 'site/footer';
+@import 'site/home';
+@import 'site/about';
+@import 'site/portfolio';
+@import 'site/press';
+
 @import 'site/responsive_tablet';
 @import 'site/responsive_mobile';

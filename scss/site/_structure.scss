@@ -25,8 +25,6 @@ A. CUSTOM SETTINGS
  * ----------------------------------------------------------------------------
  */
 
-
-
 meta.foundation-version {
     font-family: "/5.2.3/";
 }
@@ -85,9 +83,10 @@ a:hover {
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    display: inline-block;
+  max-width: 100%;
+  height:auto;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 img {
@@ -157,6 +156,27 @@ textarea {
 select {
     width: 100%;
 }
+.cta-line{
+  height: 3px;
+  margin-bottom: 70px;
+  background-color: #c0d0ed;    
+    margin-bottom:0;
+    .button {
+        background-color: #646e8c;
+        display: block;
+        font-family: Nexa,sans-serif;
+        letter-spacing: 1.5px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        top: -22.5px;
+        width: 190px;
+    }
+}
 
 /* Header
 *******************************/
@@ -166,6 +186,7 @@ select {
 /* Pagination centred wrapper */
 
 a, a:visited, a:hover, a:visited:hover {
+    text-decoration: none;
     -moz-transition: all 100ms linear;
     -o-transition: all 100ms linear;
     -webkit-transition: all 100ms linear;
@@ -182,6 +203,9 @@ a, a:visited, a:hover, a:visited:hover {
         margin: 0 auto;
         width: 100%;
     }
+}
+.page, .single {
+     padding-top:110px;
 }
 #blog-content figure img {
     max-width:100%;
@@ -404,6 +428,63 @@ img {
 .medium-centered{
     float:left!important;
 }
+
+.bottom-padding {
+  padding-bottom: 40px;
+}
+
+.content {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  line-height: 24px;
+}
+.button {
+  position: relative;
+  left: 0px;
+  right: 0px;
+  bottom: -5px;
+  width: 190px;
+  margin-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  float: right;
+  background-image: -webkit-linear-gradient(270deg, #c0d0ed, #c0d0ed);
+  background-image: linear-gradient(180deg, #c0d0ed, #c0d0ed);
+  font-family: Nexa, sans-serif;
+  color: #2e3655;
+  line-height: 13px;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+.button:hover {
+  background-color: #646e8c;
+  background-image: -webkit-linear-gradient(270deg, #646e8c, #646e8c), -webkit-linear-gradient(270deg, #c0d0ed, #c0d0ed);
+  background-image: linear-gradient(180deg, #646e8c, #646e8c), linear-gradient(180deg, #c0d0ed, #c0d0ed);
+  color: $white;
+}
+.button-2 {
+  position: relative;
+  bottom: -20px;
+  z-index: 1000;
+  display: block;
+  width: 190px;
+  margin: 0px auto;
+  padding:15px;
+  background:#646e8c;
+  font-family: Nexa, sans-serif;
+  color: $white;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.button-2:hover {
+  background:#f2f6f9;
+  color: #646e8c;
+}
 .colPadLeft45 {
     padding-left:45px;
 }
@@ -411,9 +492,9 @@ img {
     padding-right:45px;
 }
 a.contact {
-    background:$darkblue;
+    background:$primarycolor;
     transition: all 0.5s ease-in-out 0s;
-    border-bottom:3px solid $lightblue;
+    border-bottom:3px solid $secondarycolor;
     padding: 20px 23px 17px;
     font-family: 'SuperGroteskC-Med', Arial, sans-serif;
     color:$white;
@@ -421,9 +502,9 @@ a.contact {
     line-height:15px;
 }
 a.contact:hover{
-    background:$lightblue;
-    border-bottom:3px solid $darkblue;
-    color:$darkblue;
+    background:$secondarycolor;
+    border-bottom:3px solid $primarycolor;
+    color:$primarycolor;
 }
 #banner{
     background-size: cover;
@@ -452,7 +533,7 @@ a.contact:hover{
     padding:40px 0;
     text-align:center;
     h1{
-        color:$lightblue;
+        color:$secondarycolor;
     }
     h1:after{
         border-bottom: 1px solid #5d6573;
@@ -471,7 +552,7 @@ a.contact:hover{
     }
     h2 {
         font-family: 'Georgia', 'Times New Roman', serif;
-        color:$lightblue;
+        color:$secondarycolor;
         text-transform: none;
     }
 }
@@ -484,7 +565,7 @@ a.contact:hover{
     padding-bottom:40px;
 }
 #testimonials {
-    background:$lightblue; //url(../img/testimonials-BG-texture.png) no-repeat 60% 0//
+    background:$secondarycolor; //url(../img/testimonials-BG-texture.png) no-repeat 60% 0//
     position:relative;
     h5{
         color:$white;
@@ -587,7 +668,7 @@ a.contact:hover{
     .align{
         text-align:center;
         h3.blog{
-            color:$darkblue;
+            color:$primarycolor;
         }
         h3.blog:after{
             border-bottom: 1px solid #5d6573;
@@ -614,7 +695,7 @@ a.contact:hover{
             border-radius:50%;
             padding:13px 5px 15px;
             time {
-                color:$lightblue;
+                color:$secondarycolor;
                 font-family: "SuperGroteskC-Med", "Georgia", serif;
                 font-size:90%;
 
@@ -623,9 +704,9 @@ a.contact:hover{
     }
     .wrap{
         position:relative;
-        background:$lightblue;
+        background:$secondarycolor;
         padding:20px;
-        border-top:10px solid $darkblue;
+        border-top:10px solid $primarycolor;
         margin-top:-1px;
         h4{
             border-bottom:1px solid $white;
@@ -636,7 +717,7 @@ a.contact:hover{
                 transition: all 0.5s ease-in-out 0s;
             }
             a:hover{
-                color:$darkblue;
+                color:$primarycolor;
             }
         }
         p {
@@ -793,7 +874,7 @@ figure.effect-andrew {
     }
     .wrap{
         position:absolute;
-        border:1px solid $darkblue;
+        border:1px solid $primarycolor;
         left:40px;
         right:40px;
         bottom:40px;
@@ -862,7 +943,7 @@ figure.effect-andrew:hover {
                 color:$grey;
             }
             a:hover {
-                color:$lightblue;
+                color:$secondarycolor;
             }
         }
         .entry-meta,
@@ -899,7 +980,7 @@ figure.effect-andrew:hover {
                     font-size:100%;
                     a {
                         border-radius:50%;
-                        background:$lightblue;
+                        background:$secondarycolor;
                         display:block;
                         transition: all 0.5s ease-in-out 0s;
                         i {
@@ -995,7 +1076,7 @@ figure.effect-andrew:hover {
     right: 35%;
     transform: translateX(50%);   
     min-width: 300px;
-    color: #fff;
+    color: $white;
     
     img {
         width: 50px;
@@ -1004,7 +1085,7 @@ figure.effect-andrew:hover {
     h3 {
         font-family: 'SuperGroteskC-Med';
         
-        color: #fff;
+        color: $white;
         font-size: 120%;
             /* Safari */
         -webkit-transform: rotate(-15deg);
@@ -1019,13 +1100,13 @@ figure.effect-andrew:hover {
         -o-transform: rotate(-15deg);
         /* Internet Explorer */
    // filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-    color: #fff;
+    color: $white;
     }
     h3 {
         text-transform: uppercase;
     }
     p {
-        color: #fff;
+        color: $white;
         font-size: 100%;
             /* Safari */
         -webkit-transform: rotate(-15deg);

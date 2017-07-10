@@ -1,17 +1,17 @@
 <?php
 
-function portfolio() {
+function create_galleries() {
     $labels = array(
-        'name' => _x('Portfolio', 'post type general name'),
-        'singular_name' => _x('Portfolio', 'post type singular name'),
-        'add_new' => _x('Add New', 'Portfolio'),
-        'add_new_item' => __('Add New Portfolio'),
-        'edit_item' => __('Edit Portfolio'),
-        'new_item' => __('New Portfolio'),
-        'view_item' => __('View Portfolio'),
-        'search_items' => __('Search Portfolios'),
-        'not_found' => __('No Portfolios found'),
-        'not_found_in_trash' => __('No Portfolios found in Trash'),
+        'name' => _x('Gallery', 'post type general name'),
+        'singular_name' => _x('Gallery', 'post type singular name'),
+        'add_new' => _x('Add New', 'Gallery'),
+        'add_new_item' => __('Add New Gallery'),
+        'edit_item' => __('Edit Gallery'),
+        'new_item' => __('New Gallery'),
+        'view_item' => __('View Gallery'),
+        'search_items' => __('Search Galleries'),
+        'not_found' => __('No Galleries found'),
+        'not_found_in_trash' => __('No Galleries found in Trash'),
         'parent_item_colon' => ''
     );
     $args = array(
@@ -25,13 +25,13 @@ function portfolio() {
         'capability_type' => 'post',
         'hierarchical' => false,
         'menu_position' => 6,
-        'menu_icon'             => 'dashicons-portfolio',
+        'menu_icon'             => 'dashicons-format-gallery',
         'supports' => array('title', 'editor', 'thumbnail')
     );
-    register_post_type('portfolio', $args);
+    register_post_type('gallery', $args);
 }
 
-add_action('init', 'portfolio');
+add_action('init', 'create_galleries');
 
 function testimonials()
     {

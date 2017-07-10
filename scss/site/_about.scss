@@ -1,0 +1,23 @@
+#about .w-container div:first-child img{
+    height:100%;
+    margin-bottom:70px;
+}
+.cta-line{
+    margin:50px 0;
+    .button {
+        float:none;
+        background-color: #646e8c;
+        display: block;
+        font-family: Nexa,sans-serif;
+        letter-spacing: 1.5px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        top: -22.5px;
+        width: 190px;
+    }
+}

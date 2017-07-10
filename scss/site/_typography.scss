@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Vincentia';
+    src: url('../fonts/Vincentia.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nexa';
+    src: url('../fonts/Nexa-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nexa';
+    src: url('../fonts/Nexa-Regular-Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+body{
+    color: #2e3655;
+    font-family: Nexa,sans-serif;
+    font-size: 14px;
+    text-align: justify;
+}
+h1, h2, h3, h4, h5, h6{
+    z-index:100;
+    position:relative;
+}
+h1 {
+    color: $primarycolor;
+    font-family: "Vincentia", "Georgia", serif;
+    font-size: 65px;
+    font-weight: 400;
+    line-height: 1em;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+p{
+    color: #2e3655;
+    font-family: Nexa,sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 26px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+h1 {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  font-family: Vincentia, sans-serif;
+  color: $primarycolor;
+  font-size: 65px;
+  line-height: 44px;
+  font-weight: 400;
+}
+h2 {
+  font-size: 32px;
+  line-height: 36px;
+  margin-top: 20px;
+}
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 20px;
+}
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 10px;
+}
+h5 {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+h6 {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 10px;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.heading-10 {
+  margin-top: 0px;
+  margin-bottom: 70px;
+  font-family: Vincentia, sans-serif;
+  color: #2e3655;
+  font-size: 40px;
+  line-height: 1em;
+  text-align: center;
+}
+
+.heading-10.page-title {
+  margin-bottom: 0px;
+  font-size: 65px;
+  line-height: 1em;
+  font-weight: 400;
+  text-align: left;
+}

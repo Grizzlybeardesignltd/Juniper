@@ -1,23 +1,33 @@
 <?php get_header(); ?>
 <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
-        <section class="content section" id="Recent-Work">
-            <div class="container-7 w-container">
-                <div class="w-row">
-                    <div class="column-2 w-col w-col-9">
-                        <div class="w-clearfix" data-ix="fade-in-scroll">
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="clearfix">
                             <?php the_post_thumbnail('full'); ?>
-                            <h3 class="heading-6 post-title"><?php the_title(); ?></h3><a class="link-6 post-archive"><?php the_date(); ?></a>
-                            <div class="text-block-8">|</div><a class="link-6 post-archive"><?php the_category();?></a>
-                            <p class="paragraph-3"><?php the_content(); ?></p>
+                            <h3 class="heading-6 post-title"><?php the_title(); ?></h3>
+                            <div class="entry-meta">
+                                <ul>
+                                    <li><a class="post-archive"><?php the_date(); ?></a></li>
+                                    <li><a class="post-archive"><?php the_category();?></a></li>
+                                </ul>
+                                </div>
+                            <!-- Entry meta here -->
+                            <!-- Social sharing here -->
+                            <div class="entry-content">
+                            <p><?php the_content(); ?></p>
+                            <!-- Single Post Gallery Photos here -->
+                            </div>
                         </div>
                     </div>
-                    <div class="column w-col w-col-3">
-                        <div class="blue-bg first sidebar-blocks" data-ix="fade-in-scroll"><img class="image-31 image-list" sizes="(max-width: 767px) 90vw, (max-width: 991px) 147px, 190px" src="<?php echo get_template_directory_uri(); ?>/images/098-_MG_1599.jpg" srcset="<?php echo get_template_directory_uri(); ?>/images/098-_MG_1599-p-500.jpeg 500w, <?php echo get_template_directory_uri(); ?>/images/098-_MG_1599-p-1080.jpeg 1080w, <?php echo get_template_directory_uri(); ?>/images/098-_MG_1599-p-1600.jpeg 1600w, <?php echo get_template_directory_uri(); ?>/images/098-_MG_1599.jpg 1920w">
-                            <p class="paragraph paragraph-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique</p><a class="button-2 w-button" data-ix="slide-up" href="contact.html">GET IN TOUCH</a>
+                    <div class="column col-md-3">
+                        <div class="blue-bg first sidebar-blocks"><img src="<?php echo get_template_directory_uri(); ?>/images/098-_MG_1599.jpg">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique</p><a class="button" href="contact.html">GET IN TOUCH</a>
                         </div>
-                        <div class="sidebar sidebar-blocks" data-ix="fade-in-scroll">
-                            <h3 class="heading-6">Recent Posts</h3>
+                        <div class="sidebar sidebar-blocks">
+                            <h3>Recent Posts</h3>
                             <?php
                             // WP_Query arguments
                             $query = array(
@@ -44,15 +54,6 @@
                             };
                             wp_reset_query();
                             ?>
-                        </div>
-                        <div class="sidebar sidebar-blocks" data-ix="fade-in-scroll">
-                            <h3 class="heading-6">Archives</h3><?php wp_get_archives(array('type' => 'monthly', 'limit' => 12)); ?>
-                        </div>
-                        <div class="sidebar sidebar-blocks" data-ix="fade-in-scroll">
-                            <h3 class="heading-6">Categories</h3><?php wp_list_categories(); ?>
-                        </div>
-                        <div class="sidebar sidebar-blocks" data-ix="fade-in-scroll">
-                            <h3 class="heading-6">Search</h3><img class="image-4 sidebar-bdr" data-ix="slide-in-right" sizes="(max-width: 767px) 90vw, (max-width: 991px) 147px, 190px" src="<?php echo get_template_directory_uri(); ?>/images/blue-line-01-01.png" srcset="<?php echo get_template_directory_uri(); ?>/images/blue-line-01-01-p-500.png 500w, <?php echo get_template_directory_uri(); ?>/images/blue-line-01-01-p-800.png 800w, <?php echo get_template_directory_uri(); ?>/images/blue-line-01-01-p-1080.png 1080w, <?php echo get_template_directory_uri(); ?>/images/blue-line-01-01-p-1600.png 1600w, <?php echo get_template_directory_uri(); ?>/images/blue-line-01-01.png 1797w" width="415">
                         </div>
                     </div>
                 </div>

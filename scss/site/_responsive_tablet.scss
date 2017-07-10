@@ -19,6 +19,327 @@ A. CUSTOM SETTINGS
 11. HOVER EFFECTS
 12. COMMON STYLE / BORDERS
 */
+
+
+
+@media (max-width: 991px) {
+  .logo {
+    display: inline-block;
+  }
+  .image {
+    position: relative;
+    display: none;
+    float: none;
+    clear: none;
+  }
+  .heading {
+    margin-top: 40px;
+    font-size: 50px;
+    line-height: 35px;
+  }
+  .paragraph {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .paragraph-2.paragraph-tab {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .column {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .section {
+    padding-top: 40px;
+    padding-bottom: 25px;
+  }
+  .section.content {
+    padding-top: 40px;
+    padding-bottom: 25px;
+  }
+  .section.contact {
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
+  .section.testimonials {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .image-3 {
+    top: 5px;
+    width: 300px;
+  }
+  .image-4 {
+    width: 300px;
+  }
+  .button {
+    width: 150px;
+    padding: 10px;
+  }
+  .heading-2 {
+    width: 245px;
+    font-size: 50px;
+    line-height: 35px;
+  }
+  .button-2 {
+    width: 170px;
+    padding: 10px;
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .div-block-2 {
+    left: -89px;
+  }
+  .heading-3 {
+    font-size: 30px;
+    line-height: 12px;
+  }
+  .text-block {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .text-block-2.signature {
+    font-size: 40px;
+    line-height: 18px;
+  }
+  .image-9 {
+    width: 300px;
+  }
+  .image-10 {
+    width: 300px;
+  }
+  .text-field {
+    font-size: 13px;
+  }
+  .text-field-2 {
+    font-size: 13px;
+  }
+  .submit-button {
+    font-size: 13px;
+  }
+  .line {
+    width: 300px;
+  }
+  .section-7 {
+    padding-top: 40px;
+  }
+  .heading-5 {
+    font-size: 50px;
+  }
+  .section-8 {
+    padding-bottom: 40px;
+  }
+  .section-10 {
+    padding-bottom: 40px;
+  }
+  .heading-6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    line-height: 1em;
+  }
+  .heading-6.post-title {
+    font-size: 26px;
+  }
+  .paragraph-3 {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .button-3 {
+    padding: 10px;
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .text-field-3 {
+    height: 60px;
+  }
+  .text-field-4 {
+    height: 60px;
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .submit-button-2 {
+    width: 150px;
+    padding: 10px;
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .paragraph-5 {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .image-29 {
+    margin-top: 0px;
+  }
+  .lightbox-link-3 {
+    margin-top: 0px;
+  }
+  .lightbox-link-4 {
+    margin-top: 0px;
+  }
+  .lightbox-link-5 {
+    margin-bottom: 0px;
+  }
+  .lightbox-link-6 {
+    margin-bottom: 0px;
+  }
+  .lightbox-link-7 {
+    margin-bottom: 0px;
+  }
+  .paragraph-6.paragraph {
+    text-align: left;
+  }
+  .link-6 {
+    font-size: 13px;
+  }
+  .link-7 {
+    font-size: 13px;
+  }
+  .link-8 {
+    font-size: 13px;
+  }
+  .link-9 {
+    font-size: 13px;
+  }
+  .link-10 {
+    font-size: 13px;
+  }
+  .heading-8 {
+    font-size: 30px;
+    line-height: 12px;
+  }
+  .paragraph-7.entry-text {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .heading-9.signature {
+    line-height: 12px;
+  }
+  .image-35.seperator {
+    max-width: 300px;
+  }
+  .heading-10.page-title {
+    font-size: 50px;
+  }
+  .body {
+    padding-top: 0px;
+  }
+  .body-2 {
+    padding-top: 0px;
+  }
+  .body-3 {
+    padding-top: 0px;
+  }
+  .body-4 {
+    padding-top: 0px;
+  }
+  .body-5 {
+    padding-top: 0px;
+  }
+  .body-6 {
+    padding-top: 0px;
+  }
+  .body-7 {
+    padding-top: 0px;
+  }
+  .body-8 {
+    padding-top: 0px;
+  }
+  .section-12 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .content.about {
+    padding-top: 40px;
+    padding-bottom: 25px;
+  }
+  .image-48 {
+    margin-bottom: 40px;
+  }
+  .heading-bdr {
+    width: 300px;
+    margin-bottom: 40px;
+  }
+  .section-14 {
+    padding-bottom: 20px;
+  }
+  .section-14.gallery {
+    padding-bottom: 40px;
+  }
+  .row-5 {
+    margin-bottom: 30px;
+  }
+  .cta-line {
+    margin-bottom: 40px;
+  }
+  .button-4 {
+    width: 150px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .about-2 {
+    margin-bottom: 40px;
+  }
+  .recent-work-about {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .brand {
+    display: inline-block;
+  }
+  .container-12 {
+    display: block;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .image-49 {
+    position: relative;
+    display: inline-block;
+    max-height: 40px;
+    margin: 10px 0px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    float: left;
+  }
+  .nav-menu {
+    display: inline-block;
+    float: right;
+    clear: none;
+  }
+  .menu-button {
+    clear: none;
+  }
+  .menu-button-2 {
+    position: relative;
+    left: 0px;
+    display: block;
+    float: right;
+  }
+  .container-13 {
+    position: relative;
+  }
+  .nav-link-responsive {
+    margin-right: 15px;
+    margin-left: 20px;
+    padding: 10px;
+    border-bottom: 1px solid $white;
+    font-family: Nexa, sans-serif;
+    color: #2e3655;
+    text-transform: uppercase;
+  }
+  .nav-menu-2 {
+    padding-bottom: 15px;
+  }
+  .navbar-2 {
+    background-color: #f2f6f9;
+  }
+}
+
+
 @media screen and (max-width: 80.063em) {
     .blog, .archive{
         #content{
@@ -118,7 +439,7 @@ A. CUSTOM SETTINGS
      */
     .page-template-home{
         #masthead-mobile{
-            border-bottom:5px solid $darkblue;
+            border-bottom:5px solid $primarycolor;
         }
     }
     #masthead-mobile{

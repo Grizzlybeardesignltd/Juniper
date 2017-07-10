@@ -47,7 +47,7 @@ function grizzlybear_comments($comment, $args, $depth) {
     ?>
             <?php // You can start editing here. Customize the respond form below  ?>
             <?php if (have_comments()) : ?>
-        <section id="comments" class="hidden">
+        <section id="comments">
             <h5><?php comments_number(__('No Responses to', 'grizzlybear'), __('One Response to', 'grizzlybear'), __('% Responses to', 'grizzlybear')); ?> &#8220;<?php the_title(); ?>&#8221;</h5>
             <ol class="commentlist">
     <?php wp_list_comments('type=comment&callback=grizzlybear_comments'); ?>
@@ -63,7 +63,7 @@ function grizzlybear_comments($comment, $args, $depth) {
 <?php else : // this is displayed if there are no comments so far  ?>
     <?php if (comments_open()) : ?>
     <?php else : // comments are closed  ?>
-            <section id="comments" class="hidden">
+            <section id="comments">
                 <div class="notice">
                     <p class="bottom"><?php _e('Comments are closed.', 'grizzlybear') ?></p>
                 </div>
@@ -71,7 +71,7 @@ function grizzlybear_comments($comment, $args, $depth) {
     <?php endif; ?>
         <?php endif; ?>
         <?php if (comments_open()) : ?>
-        <section id="respond" class="hidden">
+        <section id="respond">
             <h5><?php comment_form_title(__('Leave a Reply', 'grizzlybear'), __('Leave a Reply to %s', 'grizzlybear')); ?></h5>
             <p class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></p>
                 <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
@@ -82,15 +82,15 @@ function grizzlybear_comments($comment, $args, $depth) {
                         <p><?php printf(__('Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'grizzlybear'), get_option('siteurl'), $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php __('Log out of this account', 'grizzlybear'); ?>"><?php _e('Log out &raquo;', 'grizzlybear'); ?></a></p>
                         <textarea name="comment" id="comment" placeholder="<?php _e('Your message here...', 'grizzlybear'); ?>" tabindex="4"></textarea>
         <?php else : ?>
-                        <div class="w-row">
-                            <div class="w-col-7 w-col">
-                                <input type="text" class="five" name="author" id="author" placeholder="<?php _e('Name', 'grizzlybear');
+                        <div class="row">
+                            <div class="col-md-7">
+                                <input type="text" class="col-md-5" name="author" id="author" placeholder="<?php _e('Name', 'grizzlybear');
             if ($req) _e(' (required)', 'grizzlybear'); ?>" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?>>
-                                <input type="text" class="five" name="email" id="email" placeholder="<?php _e('Email (will not be published)', 'grizzlybear');
+                                <input type="text" class="col-md-5" name="email" id="email" placeholder="<?php _e('Email (will not be published)', 'grizzlybear');
             if ($req) _e(' (required)', 'grizzlybear'); ?>" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?>>
-                                <input type="text" class="five" placeholder="<?php _e('Website', 'grizzlybear'); ?>" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3">
+                                <input type="text" class="col-md-5" placeholder="<?php _e('Website', 'grizzlybear'); ?>" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3">
                             </div>
-                            <div class="w-col-5 w-col">
+                            <div class="col-md-5 ">
                                 <textarea name="comment" id="comment" placeholder="<?php _e('Your message here...', 'grizzlybear'); ?>" tabindex="4"></textarea>
                             </div>
                         </div>

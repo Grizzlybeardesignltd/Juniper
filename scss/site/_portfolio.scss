@@ -1,0 +1,103 @@
+/* PORTFOLIO */
+#recent-portfolio {
+    position: relative;
+    background: #f2f6f9;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    .container {
+        position: relative;
+    }
+ img{
+    height:100%;
+}
+.heading-2{
+    margin:0 auto;
+    top:-30px;
+}
+.button-2{
+    bottom:-35px;
+}
+.bdr{
+    position:absolute;
+    top:0;
+    left:-45px;
+    right:-45px;
+    bottom:0;
+    border:1px solid $primarycolor;
+}
+}
+/* HOVER EFFECT */
+figure  {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+ img {
+    position: relative;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    opacity: 1;
+ }
+figcaption {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    margin-top:0;
+    &:before, &:after {
+    pointer-events: none;
+}
+}
+}
+figure figcaption,
+figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+figure img {
+    opacity: 1;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+figure:hover img {
+    opacity: 0.5;
+}
+figure figcaption h3, figure figcaption h2 {
+    line-height:40px;
+    padding:0;
+    height:100%;
+    text-transform: capitalize;
+    opacity: 1;
+    margin:0;
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, transform 0.5s;
+    color: $white;
+    font-family: 'Vincentia',sans-serif;
+    font-size: 43px;
+    font-weight: 300;
+    text-align: center;
+    z-index: 1001;
+}
+figure figcaption h3 span.inn, figure figcaption h2 span.inn {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
